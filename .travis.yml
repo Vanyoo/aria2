@@ -2,6 +2,7 @@ language: cpp
 compiler:
   - clang
   - gcc
+cache: ccache
 sudo: false
 addons:
   apt:
@@ -33,4 +34,4 @@ before_script:
   - autoconf
   - ./configure
 script:
-  - make check
+  - make CC="ccache $CC" CXX="ccache $CXX" check
