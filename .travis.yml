@@ -34,4 +34,4 @@ before_script:
   - autoconf
   - ./configure
 script:
-  - make CC="ccache $CC" CXX="ccache $CXX" check
+  - make CC="ccache $CC" CXX="ccache $CXX" V=1 check
