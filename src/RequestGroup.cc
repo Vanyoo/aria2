@@ -807,6 +807,7 @@ void RequestGroup::tryAutoFileRenaming()
       return;
     }
   }
+
   throw DOWNLOAD_FAILURE_EXCEPTION2(
       fmt("File renaming failed: %s", getFirstFilePath().c_str()),
       error_code::FILE_RENAMING_FAILED);
